@@ -1,13 +1,5 @@
-<head>
-<style>
-body{
-background:url(https://xxxyuyizhi.github.io/weigduf/1.png) no-repeat;
-}
-</style>
-</head>
-
 <body>
-
+<span style="position: absolute; "><img src="https://xxxyuyizhi.github.io/weigduf/1.png"></span>
 <span style="position: absolute; left: 47px; top: 124px;"><img src="https://xxxyuyizhi.github.io/weigduf/2.png" width="83" height="60" /></span>
 
 <span style="position: absolute; left: 149px; top: 98px; width: 171px; height: 127px;"><img src="https://xxxyuyizhi.github.io/weigduf/3.png" width="160" height="115" /></span>
