@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+<!--
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color:  #ff6537;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+/* ~~ 元素/标签选择器 ~~ */
+ul, ol, dl { /* 由于浏览器之间的差异，最佳做法是在列表中将填充和边距都设置为零。为了保持一致，您可以在此处指定需要的数值，也可以在列表所包含的列表项（LI、DT 和 DD）中指定需要的数值。请注意，除非编写一个更为具体的选择器，否则您在此处进行的设置将会层叠到 .nav 列表。 */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* 删除上边距可以解决边距会超出其包含的 div 的问题。剩余的下边距可以使 div 与后面的任何元素保持一定距离。 */
+	padding-right: 15px;
+	padding-left: 15px; /* 向 div 内的元素侧边（而不是 div 自身）添加填充可避免使用任何方框模型数学。此外，也可将具有侧边填充的嵌套 div 用作替代方法。 */
+}
+a img { /* 此选择器将删除某些浏览器中显示在图像周围的默认蓝色边框（当该图像包含在链接中时） */
+	border: none;
+}
+
+/* ~~ 站点链接的样式必须保持此顺序，包括用于创建悬停效果的选择器组在内。 ~~ */
+a:link {
+	color:#414958;
+	text-decoration: underline; /* 除非将链接设置成极为独特的外观样式，否则最好提供下划线，以便可从视觉上快速识别 */
+}
+a:visited {
+	color: #4E5869;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* 此组选择器将为键盘导航者提供与鼠标使用者相同的悬停体验。 */
+	text-decoration: none;
+}
+
+/* ~~ 此容器包含所有其它 div，并依百分比设定其宽度 ~~ */
+.container {
+	width: 75%;
+	max-width: 1920px;/* 可能需要最大宽度，以防止此布局在大型显示器上过宽。这将使行长度更便于阅读。IE6 不遵循此声明。 */
+	min-width: 780px;/* 可能需要最小宽度，以防止此布局过窄。这将使侧面列中的行长度更便于阅读。IE6 不遵循此声明。 */
+	background-color: #FFF;
+	margin: 0 auto; /* 侧边的自动值与宽度结合使用，可以将布局居中对齐。如果将 .container 宽度设置为 100%，则不需要此设置。 */
+}
+
+
+/* ~~ 这是布局信息。 ~~ 
+
+1) 填充只会放置于 div 的顶部和/或底部。此 div 中的元素侧边会有填充。这样，您可以避免使用任何“方框模型数学”。请注意，如果向 div 自身添加任何侧边填充或边框，这些侧边填充或边框将与您定义的宽度相加，得出 *总计* 宽度。您也可以选择删除 div 中的元素的填充，并在该元素中另外放置一个没有任何宽度但具有设计所需填充的 div。
+
+*/
+.content {
+	padding: 10px 0;
+}
+
+/* ~~ 此分组的选择器为 .content 区域中的列表提供了空间 ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* 此填充反映上述标题和段落规则中的右填充。填充放置于下方可用于间隔列表中其它元素，置于左侧可用于创建缩进。您可以根据需要进行调整。 */
+}
+
+/* ~~ 其它浮动/清除类 ~~ */
+.fltrt {  /* 此类可用于在页面中使元素向右浮动。浮动元素必须位于其在页面上的相邻元素之前。 */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* 此类可用于在页面中使元素向左浮动。浮动元素必须位于其在页面上的相邻元素之前。 */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* 如果从 .container 中删除了 overflow:hidden，则可以将此类放置在 <br /> 或空 div 中，作为 #container 内最后一个浮动 div 之后的最终元素 */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+#apDiv1 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 1;
+	top: 70px;
+	left: 27%;
+}
+#apDiv2 {	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 1;
+	top: 1070px;
+	left: 27%;
+}
+#apDiv3 {	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 1;
+	top: 2070px;
+	left: 27%;
+}
+#apDiv4 {	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 1;
+	top: 3070px;
+	left: 27%;
+}
+
+-->
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="content">
+    <div id="apDiv1"><img src="http://www.gduf.edu.cn/img/bgc.png" alt="" width="744" height="742" /></div>
+    <div id="apDiv2"><img src="http://www.gduf.edu.cn/img/bgc.png" alt="" width="744" height="742" /></div>
+    <div id="apDiv3"><img src="http://www.gduf.edu.cn/img/bgc.png" alt="" width="744" height="742" /></div>
+    <div id="apDiv4"><img src="http://www.gduf.edu.cn/img/bgc.png" alt="" width="744" height="742" /></div>
+    <h1 align="center">!!!<img src="https://xxxyuyizhi.github.io/weigduf/19.png" width="160" height="45" />!!!</h1>
+    <div label-module="para-title">
+      <h3> 　　国内合作</h3>
+      <hr align="left" width="40%" />
+    </div>
+    <div label-module="para">
+      <center>
+        <table width="90%">
+          <tr>
+            <td><div align="left"><p style="line-height: 200%">　　学校坚持开放办学，加强校际、校政和校企之间的协同合作。近年来，与西南财经大学、暨南大学签订合作协议，选拔交流生赴两校交流学习；与中国人民银行金融研究所签订战略合作协议，共同举办中国金融论坛—广金•千灯湖金融峰会、开展重大金融课题研究等；与广东省金融工作办公室结成战略合作关系，合作编制发布广东金融创新白皮书，并在政策研究、智库建设、高级人才培训以及人才交流等领域开展广泛合作；与梅州市、揭阳市、汕尾市、肇庆市、汕头市、广东金融高新区、佛山市南海区等签订合作协议，开展广泛合作；学校与广东省广晟金融控股有限公司签订战略合作协议，成立“广晟协同创新校长激励基金”，在人才培养、科学研究等方面实施全面合作；与广州日报报业集团签署战略合作协议，共建广东高端金融智库和文化金融研究院；与甘肃省公航旅投资集团签订战略合作协议，在校企联合、人员培训、学术研究、实训基地、资源信息共享等方面开展合作。
+ 
+              </p>
+                <p style="line-height: 200%"><center><img src="http://www.gduf.edu.cn/images/7.jpg" width="768" height="491" /></center></p>
+            </div></td>
+          </tr>
+        </table>
+      </center>
+    </div>
+    <div label-module="para">
+      <p><strong>　　　</strong>    </p>
+      <div label-module="para-title">
+        <h3></h3>
+        <h3> 　　国际交流</h3>
+        <hr align="left" width="40%" />
+      </div>
+      <div label-module="para">
+        <center>
+          <table width="90%">
+            <tr>
+              <td><div align="left"><p style="line-height: 200%">　　2004年升本以来，学校分别与北美、欧洲、南太平洋地区等30多所高校及机构建立非学历、实习培训项目，其中德国F+U实习转岗培训项目及暑期赴美带薪实习项目，为我校国际交流工作打开了良好的局面。为进一步做好国际交流合作工作，学校于2011年成立国际教育学院，从事国际教育项目招生宣传、教学管理及留学事务管理等，与西澳大利亚大学、英国诺丁汉大学、英国西英格兰大学、美国西阿拉巴马大学、加拿大圣玛丽大学、澳大利亚蒙纳士大学等境外高校实行“2+2”、“2+3”、“3+1”、“1+2+2”、中澳创新实验班等中外校际联合培养模式，以金融学、会计学、国际经济与贸易、市场营销等专业进行双学位联合培养项目招生，为学校师生提供阶梯式国际交流平台，促进学校国际化发展。2013年，学校与英国诺丁汉学签订合作协议，共同成立“广东-诺丁汉高级金融研究院”，共同开展高端金融人才培养、高端金融研究、高端智库建设，自2017年以来，每月有近200人次的企业高管参与我校诺丁汉金融培训班项目，期间邀请各国金融专家作为客座教授，丰富培训内容。
+<br />
+                  <p style="line-height: 200%"><center><img src="http://www.gduf.edu.cn/images/25.jpg" width="723" height="506" /></center>                                    
+              </div>
+              
+                <p>&nbsp;</p>
+              </td>
+            </tr>
+          </table>
+        </center>
+      </div>
+    </div>
+  <!-- end .content --></div>
+  <!-- end .container -->
+<div label-module="para-title">
+  <h3></h3>
+  <h3> 　　  </h3>
+</div>
+</body>
+</html>

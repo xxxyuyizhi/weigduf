@@ -1,0 +1,402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+<!--
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: #ff6537;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+/* ~~ 元素/标签选择器 ~~ */
+ul, ol, dl { /* 由于浏览器之间的差异，最佳做法是在列表中将填充和边距都设置为零。为了保持一致，您可以在此处指定需要的数值，也可以在列表所包含的列表项（LI、DT 和 DD）中指定需要的数值。请注意，除非编写一个更为具体的选择器，否则您在此处进行的设置将会层叠到 .nav 列表。 */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* 删除上边距可以解决边距会超出其包含的 div 的问题。剩余的下边距可以使 div 与后面的任何元素保持一定距离。 */
+	padding-right: 15px;
+	padding-left: 15px; /* 向 div 内的元素侧边（而不是 div 自身）添加填充可避免使用任何方框模型数学。此外，也可将具有侧边填充的嵌套 div 用作替代方法。 */
+	font-weight: normal;
+	font-size: 76%;
+}
+a img { /* 此选择器将删除某些浏览器中显示在图像周围的默认蓝色边框（当该图像包含在链接中时） */
+	border: none;
+}
+
+/* ~~ 站点链接的样式必须保持此顺序，包括用于创建悬停效果的选择器组在内。 ~~ */
+a:link {
+	color:#414958;
+	text-decoration: underline; /* 除非将链接设置成极为独特的外观样式，否则最好提供下划线，以便可从视觉上快速识别 */
+}
+a:visited {
+	color: #4E5869;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* 此组选择器将为键盘导航者提供与鼠标使用者相同的悬停体验。 */
+	text-decoration: none;
+}
+
+/* ~~ 此容器包含所有其它 div，并依百分比设定其宽度 ~~ */
+.container {
+	width: 75%;
+	max-width: 1920px;/* 可能需要最大宽度，以防止此布局在大型显示器上过宽。这将使行长度更便于阅读。IE6 不遵循此声明。 */
+	min-width: 780px;/* 可能需要最小宽度，以防止此布局过窄。这将使侧面列中的行长度更便于阅读。IE6 不遵循此声明。 */
+	background-color: #FFF;
+	margin: 0 auto; /* 侧边的自动值与宽度结合使用，可以将布局居中对齐。如果将 .container 宽度设置为 100%，则不需要此设置。 */
+}
+
+/* ~~ 这是布局信息。 ~~ 
+
+1) 填充只会放置于 div 的顶部和/或底部。此 div 中的元素侧边会有填充。这样，您可以避免使用任何“方框模型数学”。请注意，如果向 div 自身添加任何侧边填充或边框，这些侧边填充或边框将与您定义的宽度相加，得出 *总计* 宽度。您也可以选择删除 div 中的元素的填充，并在该元素中另外放置一个没有任何宽度但具有设计所需填充的 div。
+
+*/
+.content {
+	padding: 10px 0;
+}
+
+/* ~~ 此分组的选择器为 .content 区域中的列表提供了空间 ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* 此填充反映上述标题和段落规则中的右填充。填充放置于下方可用于间隔列表中其它元素，置于左侧可用于创建缩进。您可以根据需要进行调整。 */
+}
+
+/* ~~ 其它浮动/清除类 ~~ */
+.fltrt {  /* 此类可用于在页面中使元素向右浮动。浮动元素必须位于其在页面上的相邻元素之前。 */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* 此类可用于在页面中使元素向左浮动。浮动元素必须位于其在页面上的相邻元素之前。 */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* 如果从 .container 中删除了 overflow:hidden，则可以将此类放置在 <br /> 或空 div 中，作为 #container 内最后一个浮动 div 之后的最终元素 */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+#apDiv2 {
+	position: absolute;
+	width: 701px;
+	height: 39px;
+	z-index: 2;
+	left: 236px;
+	top: 25px;
+	font-weight: bold;
+	font-size: 200%;
+}
+#apDiv3 {
+	position: absolute;
+	width: 764px;
+	height: 93px;
+	z-index: 3;
+	left: 237px;
+	top: 98px;
+	font-size: 100%;
+}
+#apDiv4 {
+	position: absolute;
+	width: 798px;
+	height: 134px;
+	z-index: 4;
+	left: 285px;
+	top: 649px;
+}
+#apDiv5 {
+	position: absolute;
+	width: 874px;
+	height: 416px;
+	z-index: 5;
+	left: 234px;
+	top: 484px;
+}
+#apDiv6 {
+	position: absolute;
+	width: 756px;
+	height: 252px;
+	z-index: 6;
+	left: 246px;
+	top: 466px;
+	font-size: 100%;
+}
+#apDiv7 {
+	position: absolute;
+	width: 296px;
+	height: 267px;
+	z-index: 7;
+	left: 1006px;
+	top: 41px;
+}
+.x {
+	font-weight: bold;
+}
+#apDiv1 {
+	position: absolute;
+	width: 779px;
+	height: 60px;
+	z-index: 8;
+	left: 248px;
+	top: 105px;
+}
+.x {
+	font-size: 150%;
+}
+#apDiv8 {
+	position: absolute;
+	width: 731px;
+	height: 109px;
+	z-index: 9;
+	left: 17px;
+	top: 97px;
+	font-size: 50%;
+}
+.e {
+	font-size: 100%;
+}
+.container .content #apDiv3 p {
+	font-size: 100px;
+}
+.container .content #apDiv3 p {
+	font-size: 100%;
+}
+#apDiv9 {
+	position: absolute;
+	width: 686px;
+	height: 102px;
+	z-index: 9;
+	left: 601px;
+	top: 398px;
+}
+#apDiv10 p {
+	font-size: 120px;
+}
+#apDiv10 p {
+	font-size: 100px;
+}
+
+#apDiv10 p {
+	font-size: 20%;
+}
+#apDiv10 p {
+	font-size: 150%;
+}
+#apDiv10 p {
+	font-size: 100%;
+}
+.r {
+	font-weight: bold;
+}
+.container .content #apDiv10 p .r {
+	font-size: 100%;
+}
+#apDiv10 {
+	position: absolute;
+	width: 590px;
+	height: 343px;
+	z-index: 9;
+	left: 758px;
+	top: 467px;
+	font-size: 100%;
+}
+#apDiv6 p {
+	font-size: 120px;
+}
+#apDiv6 p {
+	font-size: 100px;
+}
+
+#apDiv6 p {
+	font-size: 20%;
+}
+#apDiv6 p {
+	font-size: 150%;
+}
+#apDiv6 p {
+	font-size: 100%;
+}
+.r {
+	font-weight: bold;
+}
+.container .content #apDiv10 p .r {
+	font-size: 100%;
+}
+.b {	font-size: 72%;
+}
+#apDiv11 {
+	position: absolute;
+	width: 414px;
+	height: 432px;
+	z-index: 10;
+	left: 401px;
+	top: 467px;
+	font-size: 100%;
+}
+#apDiv11 p {
+	font-size: 120px;
+}
+#apDiv11 p {
+	font-size: 100px;
+}
+
+#apDiv11 p {
+	font-size: 20%;
+}
+#apDiv11 p {
+	font-size: 150%;
+}
+#apDiv11 p {
+	font-size: 100%;
+}
+#apDiv12 {
+	position: absolute;
+	width: 703px;
+	height: 606px;
+	z-index: 11;
+	left: 930px;
+	top: 467px;
+	font-size: 100%;
+}
+#apDiv12 p {
+	font-size: 120px;
+}
+#apDiv12 p {
+	font-size: 100px;
+}
+
+#apDiv12 p {
+	font-size: 20%;
+}
+#apDiv12 p {
+	font-size: 150%;
+}
+#apDiv12 p {
+	font-size: 100%;
+}
+}
+.t {
+	font-size: 80%;
+}
+#apDiv13 {
+	position: absolute;
+	width: 325px;
+	height: 61px;
+	z-index: 12;
+	left: 944px;
+	top: 657px;
+	font-size: 80%;
+}
+#apDiv14 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 13;
+	left: 300px;
+	top: 55px;
+}
+-->
+</style></head>
+
+<body>
+
+<div class="container">
+  <div class="content">
+    <div id="apDiv2">
+      <p class="x">广东金融学院 </p>
+      <p>&nbsp;</p>
+      <div id="apDiv8">Guangdong University Of Finance {gduf}</div>
+    </div>
+    <h1>&nbsp;</h1>
+    <p>&nbsp;</p>
+   
+    <div id="apDiv1">
+      <hr />
+    </div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <div id="apDiv14"><img src="http://www.gduf.edu.cn/img/bgc.png" alt="" width="744" height="742" /></div>
+    <p>&nbsp;</p>
+    <div id="apDiv12">
+      <p>雍和明</p>
+      <p>广东省</p>
+      <p>1 个</p>
+      <p>明德 敏学 笃行 致远</p>
+      <p>《融通天下》 </p>
+      <p>　　</p>
+      <p>广州市天河区迎福路527号</p>
+      <p>11540</p>
+    </div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <div id="apDiv13">金融与投资学院、会计学院、保险学院、经济贸易学院、工商管理学院等</div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <div id="apDiv10">
+      <p><span class="r">现任校长</span> 　　<span class="b"> </span><span class="b"> </span><span class="b"> </span><span class="b"> </span><span class="b"> </span><span class="b"> </span>　</p>
+      <p><span class="r">主管部门</span>　　　　　　　　 </p>
+      <p><span class="r">硕士点　</span>　<span class="b"> </span><span class="b"> </span><span class="b"> </span><span class="b"> </span><span class="b"> </span><span class="b"> </span>　</p>
+      <p><span class="r">校    训</span> 　</p>
+      <p><span class="r">校    歌</span> 　　<span class="b"> </span><span class="b"> </span><span class="b"> </span><span class="b"> </span><span class="b"> </span><span class="b"> </span>　</p>
+      <p><span class="r">主要院系</span>　　　　　　　　 </p>
+      <p><span class="r">学校地址　</span>　<span class="b"> </span><span class="b"> </span><span class="b"> </span><span class="b"> </span><span class="b"> </span><span class="b"> </span>　</p>
+      <p><span class="r">学校代码</span> 　</p>
+    </div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <div id="apDiv11"> 
+      <p>广东金融学院</p>
+      <p>Guangdong University of Finance</p>
+      <p>广金（GDUF）</p>
+      <p>1950</p>
+      <p>公立大学 </p>
+      <p>财经  </p>
+      <p>省属高等院校</p>
+      <p>广东·广州 </p>
+    </div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <!-- end .content -->
+    <div id="apDiv3"> 　　
+      <p>　　</p>
+      
+    　　
+    <p>　　广东金融学院（Guangdong University of Finance），是一所省属公办普通本科院校，也是华南地区唯一的金融类高校。    　　</p>
+    <p>　　广东金融学院创建于1950年，前身是中国人民银行华南分区行银行学校，由中国人民银行总行管理；2000年，院校管理体制改革后，实行中央与地方共同管理 ，以广东省管理为主。2004年5月，经教育部批准，正式升格为本科院校。 　　</p>
+    <p>　　据2014年7月学校官网显示，学校占地面积820亩，建筑面积约29万平方米，分设广州校区和肇庆校区，筹建汕尾校区   ，广州校区位于广州市天河区，毗邻华南植物园；肇庆校区坐落在肇庆星湖畔；汕尾校区位于国家改革开放新实验田深汕特别合作区。学校现有教职工1200多人，专任教师895人，其中正高职称教师102人，副高职称教师226人，拥有博士学历的教师近200人，全日制本、专科在校生规模21000多人。 </p>
+    </div>
+  </div>
+  <!-- end .container --></div>
+<div id="apDiv6"> 
+  <p><span class="r">中文名</span> 　　　　　</p>
+  <p><span class="r">英文名</span> 　　<span class="b"> </span><span class="b"> </span><span class="b"> </span><span class="b"> </span><span class="b"> </span><span class="b"> </span>　　　</p>
+  <p><span class="r">简    称</span>　　　　<span class="b"> 　　　　</span></p>
+  <p><span class="r">创办时间</span>　　　<span class="b">　</span></p>
+    <p><span class="r">类    别</span> 　<span class="b">　</span><span class="b">　</span><span class="b"> </span><span class="b"> </span><span class="b"> </span><span class="b"> </span><span class="b"> </span><span class="b"> </span>　　<span class="b">　</span>　</p>
+  <p><span class="r">学校类型</span>　　　　</p>
+  <p><span class="r">属性</span>　　　　　　　　</p>
+  <p><span class="r">所属地区</span> 　<span class="b">　</span>　<span class="b">　</span>　</p>
+
+</div>
+<div id="apDiv7"><img src="23.jpg" width="231" height="205" /></div>
+</body>
+</html>
